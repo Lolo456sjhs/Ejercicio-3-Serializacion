@@ -1,29 +1,31 @@
-**Ejercicio 3 – Serialización
+# Ejercicio 3 – Serialización
 
-Proyecto en Java que envía y recibe múltiples objetos Producto mediante sockets, implementando dos métodos:
+Proyecto en Java que envía y recibe múltiples objetos **Producto** mediante sockets, implementando dos métodos de serialización: Texto y Binario.
+---
+## Serialización en Texto
 
-*Texto
-
-Formato:
+Formato utilizado:
 
 Clave|Nombre|Precio|Cantidad|Marca|Fecha
 
-Fecha en dd/MM/yyyy.
+- Separador: `|`
+- Fecha en formato: `dd/MM/yyyy`
+---
+## Serialización en Binario
 
-*Binario
+Sin separadores, utilizando tamaños fijos:
 
-Sin separadores, usando tamaños fijos:
+- Clave: 6 caracteres  
+- Nombre: 30 caracteres  
+- Marca: 30 caracteres  
+- Precio: double  
+- Cantidad: int  
+- Fecha: Timestamp (Epoch)
+---
+## Medición
 
-Clave: 6 caracteres
+En ambos casos se mide:
+- Tamaño en bytes enviados
+- Tiempo de procesamiento
 
-Nombre: 30 caracteres
-
-Marca: 30 caracteres
-
-Precio: double
-
-Cantidad: int
-
-Fecha: Timestamp (Epoch)
-
-En ambos casos se mide el tamaño en bytes enviados y el tiempo de procesamiento.
+Equipo 4
