@@ -1,8 +1,8 @@
-Ejercicio 3 – Serialización
+**Ejercicio 3 – Serialización
 
 Proyecto en Java que envía y recibe múltiples objetos Producto mediante sockets, implementando dos métodos:
 
-Texto
+*Texto
 
 Formato:
 
@@ -10,7 +10,7 @@ Clave|Nombre|Precio|Cantidad|Marca|Fecha
 
 Fecha en dd/MM/yyyy.
 
-Binario
+*Binario
 
 Sin separadores, usando tamaños fijos:
 
