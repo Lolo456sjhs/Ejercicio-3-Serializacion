@@ -1,0 +1,5 @@
+com\mycompany\productoserializacion\ClienteBinario.class
+com\mycompany\productoserializacion\ClienteTexto.class
+com\mycompany\productoserializacion\Producto.class
+com\mycompany\productoserializacion\ServidorBinario.class
+com\mycompany\productoserializacion\ServidorTexto.class
