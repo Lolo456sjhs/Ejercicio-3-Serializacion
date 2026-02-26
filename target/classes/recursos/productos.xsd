@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+    Este es el ESQUEMA XSD.
+    Define la estructura obligatoria que debe tener el XML.
+-->
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+    <!-- Elemento raíz obligatorio -->
+    <xsd:element name="productos">
+        <xsd:complexType>
+            <xsd:sequence>
+
+                <!-- Puede haber uno o muchos productos -->
+                <xsd:element name="producto" maxOccurs="unbounded">
+                    <xsd:complexType>
+                        <xsd:sequence>
+
+                            <!-- Clave obligatoria tipo texto -->
+                            <xsd:element name="clave" type="xsd:string"/>
+
+                            <!-- Nombre del producto -->
+                            <xsd:element name="nombre" type="xsd:string"/>
+
+                            <!-- Precio tipo decimal -->
+                            <xsd:element name="precio" type="xsd:double"/>
+
+                            <!-- Cantidad tipo entero -->
+                            <xsd:element name="cantidad" type="xsd:int"/>
+
+                            <!-- Marca tipo texto -->
+                            <xsd:element name="marca" type="xsd:string"/>
+
+                            <!-- Fecha tipo date (formato AAAA-MM-DD) -->
+                            <xsd:element name="fechaReg" type="xsd:date"/>
+
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+</xsd:schema>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://com.mycompany.productoserializacion"
+           xmlns:tns="http://com.mycompany.productoserializacion"
+           elementFormDefault="qualified">
+
+    <!-- Elemento raíz: lista de productos -->
+    <xs:element name="productos">
+        <xs:complexType>
+            <xs:sequence>
+                <!-- Puede haber 1 o más productos -->
+                <xs:element name="producto" type="tns:ProductoType" minOccurs="1" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Definición del tipo Producto -->
+    <xs:complexType name="ProductoType">
+        <xs:sequence>
+            <!-- Clave: máximo 6 caracteres -->
+            <xs:element name="clave">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:maxLength value="6"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+
+            <!-- Nombre: máximo 30 caracteres -->
+            <xs:element name="nombre">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:maxLength value="30"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+
+            <!-- Precio: decimal positivo -->
+            <xs:element name="precio">
+                <xs:simpleType>
+                    <xs:restriction base="xs:double">
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+
+            <!-- Cantidad: entero no negativo -->
+            <xs:element name="cantidad" type="xs:int"/>
+
+            <!-- Marca: máximo 30 caracteres -->
+            <xs:element name="marca">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:maxLength value="30"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+
+            <!-- Fecha de registro en formato DD/MM/AAAA -->
+            <xs:element name="fechaReg">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <!-- Patrón DD/MM/AAAA -->
+                        <xs:pattern value="\d{2}/\d{2}/\d{4}"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<productos>
+<producto>
+<clave>ABC123</clave>
+<nombre>Laptop</nombre>
+<precio>12000.0</precio>
+<cantidad>5</cantidad>
+<marca>Dell</marca>
+<fechaReg>2026-02-25</fechaReg>
+</producto>
+<producto>
+<clave>XYZ789</clave>
+<nombre>Mouse</nombre>
+<precio>300.0</precio>
+<cantidad>10</cantidad>
+<marca>Logitech</marca>
+<fechaReg>2026-02-25</fechaReg>
+</producto>
+</productos>
